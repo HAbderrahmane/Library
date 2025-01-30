@@ -1,10 +1,11 @@
 <app-search-input (search)="onSearch($event)"></app-search-input>
-
 <div class="book-list">
-  <div class="book-card" *ngFor="let book of books">
+  @for(book of books; track book.id){
+  <div class="book-card" (click)="onClick(book.id)">
     <img [src]="book.thumbnail" [alt]="book.title" />
     <h3>{{ book.title }}</h3>
     <p><strong>Author(s):</strong> {{ book.authors.join(", ") }}</p>
     <p><strong>Published:</strong> {{ book.publishedDate }}</p>
   </div>
+  }
 </div>
