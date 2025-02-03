@@ -14,9 +14,6 @@
   <div class="maturityRating">
     Maturity Rating: {{ bookDetails?.maturityRating }}
   </div>
-  <div class="thumbnail">
-    <img [src]="book[0]?.thumbnail" alt="{{ book[0]?.title }}" />
-  </div>
   <div class="saleInfo">
     @if(bookDetails?.saleInfo?.retailPrice){
     <p>
@@ -60,4 +57,8 @@
     </p>
     }
   </div>
+</div>
+
+<div class="thumbnail">
+  <img [src]="book[0]?.thumbnail" alt="{{ book[0]?.title }}" />
 </div>
